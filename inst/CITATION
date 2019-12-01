@@ -1,0 +1,10 @@
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
+
+bibentry(bibtype = "Manual",
+         title = "{rcrimeanalysis}: An Implementation of Crime Analysis Methods",
+         author = c(person("Jamie", "Spaulding"),
+                    person("Keith", "Morris")),
+         year = year,
+         note = note,
+         url = "https://github.com/JSSpaulding/rcrimeanalysis")
