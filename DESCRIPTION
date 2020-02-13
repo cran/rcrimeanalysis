@@ -1,7 +1,7 @@
 Package: rcrimeanalysis
 Type: Package
 Title: An Implementation of Crime Analysis Methods
-Version: 0.2.0
+Version: 0.3.1
 Author: Jamie Spaulding and Keith Morris
 Maintainer: Jamie Spaulding <jspauldi@mix.wvu.edu>
 Description: An implementation of functions for the analysis of crime incident or records
@@ -14,11 +14,10 @@ Depends: R (>= 3.5.0)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports: dplyr, forecast, ggmap, graphics, grDevices, htmltools,
-        igraph, leaflet, lubridate, KernSmooth, raster, rgdal, sp,
-        stats
+Imports: dplyr, ggmap, htmltools, igraph, leaflet, leafsync, lubridate,
+        KernSmooth, pals, prophet, raster, Rcpp, rgdal, sp, stats
 RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2020-02-09 19:55:54 UTC; jsspa
+Packaged: 2020-02-12 19:06:24 UTC; jspauldi
 Repository: CRAN
-Date/Publication: 2020-02-09 20:20:02 UTC
+Date/Publication: 2020-02-13 17:00:02 UTC

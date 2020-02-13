@@ -53,18 +53,18 @@ kde_map <- function(data, pts = NULL){
     sp::Polygons(list(sp::Polygon(cbind(CL[[i]]$x, CL[[i]]$y))), ID = i))
   spgons = sp::SpatialPolygons(pgons)
   if (isTRUE(pts)){
-  map <- leaflet::leaflet(data) %>% leaflet::addProviderTiles(leaflet::providers$Esri.NatGeoWorldMap) %>%
-    leaflet::addScaleBar(position = "bottomright") %>%
-    leaflet::addPolygons(data = spgons, color = grDevices::heat.colors(NLEV, NULL)[LEVS]) %>%
-    leaflet::addCircles(lon, lat, popup = paste("Case Number:", data$case_number, "<br/>"
-                                       ,"Description:", data$description, "<br/>"
-                                       ,"District:", data$district, "<br/>"
-                                       ,"Beat:", data$beat, "<br/>"
-                                       ,"Date:", data$date), color ="purple")
+    map <- leaflet::leaflet(data) %>% leaflet::addProviderTiles(leaflet::providers$Esri.NatGeoWorldMap) %>%
+      leaflet::addScaleBar(position = "bottomright") %>%
+      leaflet::addPolygons(data = spgons, color = grDevices::heat.colors(NLEV, NULL)[LEVS]) %>%
+      leaflet::addCircles(lon, lat, popup = paste("Case Number:", data$case_number, "<br/>"
+                                                  ,"Description:", data$description, "<br/>"
+                                                  ,"District:", data$district, "<br/>"
+                                                  ,"Beat:", data$beat, "<br/>"
+                                                  ,"Date:", data$date), color ="purple")
   } else {
-  map <- leaflet::leaflet(data) %>% leaflet::addProviderTiles(leaflet::providers$Esri.NatGeoWorldMap) %>%
-    leaflet::addScaleBar(position = "bottomright") %>%
-    leaflet::addPolygons(data = spgons, color = grDevices::heat.colors(NLEV, NULL)[LEVS])
+    map <- leaflet::leaflet(data) %>% leaflet::addProviderTiles(leaflet::providers$Esri.NatGeoWorldMap) %>%
+      leaflet::addScaleBar(position = "bottomright") %>%
+      leaflet::addPolygons(data = spgons, color = grDevices::heat.colors(NLEV, NULL)[LEVS])
   }
   return(map)
 }

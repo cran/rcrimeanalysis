@@ -29,12 +29,9 @@
 #' @author Jamie Spaulding, Keith Morris
 #' @keywords spatial
 #' @examples
-#' \dontshow{#' data(crimes)
-#' nr_data <- head(crimes, n = 100)
-#' out <- near_repeat_analysis(data=nr_data,tz="America/Chicago",epsg="32616")}
-#' \donttest{data(crimes)
+#' data(crimes)
 #' nr_data <- head(crimes, n = 1000) #truncate dataset for near repeat analysis
-#' out <- near_repeat_analysis(data=nr_data,tz="America/Chicago",epsg="32616")}
+#' out <- near_repeat_analysis(data=nr_data,tz="America/Chicago",epsg="32616")
 #'
 #' @importFrom sp SpatialPoints
 #' @importFrom sp CRS

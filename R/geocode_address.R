@@ -30,4 +30,3 @@ geocode_address <- function(location){
   out <- geocode(location)
   return(out)
 }
-
