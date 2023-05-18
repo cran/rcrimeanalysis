@@ -13,9 +13,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-
 library(rcrimeanalysis)
-library(dplyr)
+require(dplyr)
 ```
 
 The *rcrimeanalysis* package is designed for the analysis of crime incident data from record management systems utilized by policing and security agencies throughout the United States. The package was contributed to provide a robust open source platform with crime analysis functionality since wide variations exist in the techniques that departments use, the levels of sophistication that police managers possess, and the frequency with which agencies engage in crime mapping. 
@@ -159,7 +158,7 @@ crime_samp <- head(crimes, n = 1000)
 out <- near_repeat_analysis(data = crime_samp, 
                             tz = "America/Chicago",
                             epsg = "32616")
-igraph::plot.igraph(out[[26]])
+igraph::plot.igraph(out[[5]],layout=igraph::layout.sphere)
 ```
 
 Each vertex of the graph is a crime incident and each edge represents the linkage of these incidents within the specified spatial and temporal parameters. The linkage networks provide potential crime networks discovered under the near repeat premise for intelligence driven police investigation and intervention.

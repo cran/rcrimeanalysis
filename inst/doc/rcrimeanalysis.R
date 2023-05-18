@@ -3,9 +3,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-
 library(rcrimeanalysis)
-library(dplyr)
+require(dplyr)
 
 ## ----setup, eval = FALSE------------------------------------------------------
 #  # Install from CRAN
@@ -59,7 +58,7 @@ crime_samp <- head(crimes, n = 1000)
 out <- near_repeat_analysis(data = crime_samp, 
                             tz = "America/Chicago",
                             epsg = "32616")
-igraph::plot.igraph(out[[26]])
+igraph::plot.igraph(out[[5]],layout=igraph::layout.sphere)
 
 ## ----eval=FALSE---------------------------------------------------------------
 #  near_repeat_eval(data = crime_samp,
